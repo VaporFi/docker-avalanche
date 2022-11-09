@@ -1,0 +1,18 @@
+avalanche:
+  image: avaplatform/avalanchego
+  container_name: avax
+  command:
+    [
+      "/avalanchego/build/avalanchego",
+      "--db-dir=/data/avax",
+      "--api-admin-enabled=true",
+      "--http-host=0.0.0.0",
+      "--bootstrap-retry-enabled",
+      "--state-sync-enabled=true"
+    ]
+  ports:
+    - 9650:9650
+    - 9651:9651
+  volumes:
+    - ./avax-data:/data/avax
+  restart: unless-stopped
