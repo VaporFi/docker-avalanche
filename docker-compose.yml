@@ -5,7 +5,6 @@ avalanche:
     [
       "/avalanchego/build/avalanchego",
       "--db-dir=/data/avax",
-      "--api-admin-enabled=true",
       "--http-host=0.0.0.0",
       "--bootstrap-retry-enabled",
       "--state-sync-enabled=true"
